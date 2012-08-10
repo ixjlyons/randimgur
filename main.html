@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+    <head>
+        <title>RandImgur</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #172233;  
+                font-family: "Helvetica Neue", Helvetica, Arial, sans-seriv;
+                font-size: 16px;
+                color: #fff;
+            }
+
+            #header {
+                position: fixed;
+                width: 100%;
+                top: 0;
+                background-color: #2B2B2B;
+                border-bottom: 4px solid #444442;
+                min-height: 20px;
+                z-index: 1000;
+            }
+
+            #title {
+                float: left;
+            }
+            #title:hover {
+                background-color: #444442;
+            }
+            #title:hover #instructions {
+                display: block;
+            }
+
+            h1 {
+                color: #fff;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            h1 img {
+                height: 20px;
+                vertical-align: text-top;
+                margin: 0 1px;
+            }
+
+            #instructions {
+                display: none;
+                position: fixed;
+                top: 40px;
+                left: 0;
+                width: 210px;
+                background-color: #2B2B2B;
+                padding: 10px 10px;
+                font-size: 0.75em;
+                border: 4px solid #444442;
+            }
+
+            #instructions p {
+                margin-bottom: 10px;
+            }
+
+            #stat {
+                float: right;
+                text-align: right;
+                padding: 10px;
+            }
+            #stat:hover {
+                background-color: #444442;
+            }
+            #stat:hover #prev {
+                display: block;
+            }
+
+            #prev {
+                display: none;
+                position: fixed;
+                top: 40px;
+                left: 200px;
+                width: 300px;
+                background-color: #2B2B2B;
+                padding: 10px 10px;
+                font-size: 0.75em;
+                border: 4px solid #444442;
+            }
+            
+            #picture {
+                margin: 5px;
+                border: 2px solid black;
+                float: center;
+            }
+
+            #content {
+                padding-top: 50px;
+            }
+        </style>
+
+        <script src="loader.js"></script>
+    </head>
+
+    <body id="page">
+        <header id="header">
+            <div id="title">
+                <h1>
+                    Rand
+                    <a href="http://imgur.com">
+                        <img src="imgur.svg">
+                    </a>
+                </h1>
+
+                <div id="instructions">
+                    <p>Press 'n' or click on the header to load a new image. </p>
+                    <p>Images are randomly chosen and the only filtering that is performed is to avoid showing "image does not exist" 4 out of 5 times.</p>
+                    <p><strong>You have been warned</strong></p>
+                </div>
+            </div>
+
+            <div id="stat">
+                <p>Loading...</p>
+
+                <div id="prev">
+                    <p>1</p>
+                    <p>2</p>
+                </div>
+            </div>
+
+        </header>
+
+        <center>
+            <div id="content">
+                <div>
+                    <img id="picture"></img>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
