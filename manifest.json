@@ -1,8 +1,8 @@
 {
-	"name": "RandImgur",
-	"version": "1.1",
-	"manifest_version": 2,
-	"description": "Generate a random Imgur URL and roll the dice!",
+    "name": "RandImgur",
+    "version": "1.1",
+    "manifest_version": 2,
+    "description": "Generate a random Imgur URL and roll the dice!",
     "app": {
         "launch": {
             "local_path": "main.html"
@@ -12,8 +12,8 @@
         "16": "icon16.png",
         "128": "icon.png"
     },
-	"permissions": [
+    "permissions": [
         "tabs",
-		"http://api.imgur.com/"
-	]
+        "http://api.imgur.com/"
+    ]
 }
